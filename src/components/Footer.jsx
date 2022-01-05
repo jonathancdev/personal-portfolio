@@ -9,11 +9,11 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="icons">
-        <a className="icon__link" href="#">
+        <a className="icon__link" href="http://www.github.com">
           {/* <Icon name="github" size="25px" color="rgba(0, 0, 0, 0.5)"></Icon> */}
           <span>github</span>
         </a>
-        <div className="icon__link" href="#" onClick={handleClick}>
+        <div className="icon__link" onClick={handleClick}>
           {emailLinkClicked ? (
             <span>jonathancdev@protonmail.com</span>
           ) : (

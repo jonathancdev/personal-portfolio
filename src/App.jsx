@@ -12,12 +12,8 @@ import Footer from "./components/Footer";
 import useScrollPosition from "./hooks/useScrollPosition";
 // import Icon from "./components/Icon";
 const IndexPage = () => {
-  const {
-    headerShouldBeFixed,
-    arrowButtonShouldBeVisible,
-    handleScroll,
-    currentSection,
-  } = useScrollPosition();
+  const { headerShouldBeFixed, arrowButtonShouldBeVisible, currentSection } =
+    useScrollPosition();
 
   const [activeLink, setActiveLink] = useState("home");
 

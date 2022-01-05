@@ -29,9 +29,23 @@ export default function Project({ name, title, description }) {
         {imageArray &&
           imageArray.map((url, i) => {
             if (counter === i + 1) {
-              return <img className="carousel__image active" src={url} />;
+              return (
+                <img
+                  key={i}
+                  className="carousel__image active"
+                  src={url}
+                  alt={info.title}
+                />
+              );
             } else {
-              return <img className="carousel__image" src={url} />;
+              return (
+                <img
+                  className="carousel__image"
+                  key={i}
+                  src={url}
+                  alt={info.title}
+                />
+              );
             }
           })}
         <div className="carousel__navigation">

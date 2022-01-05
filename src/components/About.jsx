@@ -3,7 +3,7 @@ import SkillGrid from "./SkillGrid";
 // import Icon from "./Icon";
 
 export default function About() {
-  const aboutIcon = "../svg/icons/abouticon.svg";
+  // const aboutIcon = "../svg/icons/abouticon.svg";
   return (
     <section id="about" className="about main__section">
       <h1 className="section__heading--primary">About</h1>
