@@ -10,7 +10,7 @@ import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import useScrollPosition from "./hooks/useScrollPosition";
-// import Icon from "./components/Icon";
+import { ReactComponent as ArrowIcon } from "./svg/arrow.svg";
 const IndexPage = () => {
   const { headerShouldBeFixed, arrowButtonShouldBeVisible, currentSection } =
     useScrollPosition();
@@ -51,7 +51,7 @@ const IndexPage = () => {
           }
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          {/* <Icon name="arrow" /> */}
+          <ArrowIcon></ArrowIcon>
         </button>
       </section>
 

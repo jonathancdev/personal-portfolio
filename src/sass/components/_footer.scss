@@ -23,6 +23,12 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    svg {
+      height: 3rem;
+      path {
+        fill: a.$color-black-75;
+      }
+    }
     cursor: pointer;
     &:first-child {
       margin-right: 2rem;

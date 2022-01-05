@@ -113,7 +113,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  transition: all 0.3s ease-in-out;
   svg {
     height: 2.5rem;
     @include a.respond(mobile) {
@@ -124,6 +124,14 @@ button {
     }
   }
   &:active {
+    svg {
+      path {
+        fill: a.$color-blue-dark-50;
+      }
+    }
+  }
+  &:hover {
+    background-color: a.$color-black-10;
     svg {
       path {
         fill: a.$color-blue-dark-50;

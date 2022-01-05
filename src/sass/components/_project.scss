@@ -1,27 +1,38 @@
 @use "../abstracts/" as a;
 .project {
-  position: relative;
-  aspect-ratio: 4 / 3.5;
-  height: auto;
-  width: 90%;
-  max-width: 80rem;
-  @include a.respond(mobile) {
-    aspect-ratio: 4 / 4;
-  }
-  @include a.respond(def) {
-    max-width: 95rem;
-  }
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  background-color: inherit;
+  border-radius: 5px;
+  position: relative;
+  aspect-ratio: 4 / 4;
+  height: auto;
+  width: 90%;
+  max-width: 80rem;
+  @include a.respond(laptop) {
+    flex-direction: row;
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+    width: 100%;
+    max-width: 95vw;
+    aspect-ratio: 2 / 1.2;
+  }
+  @include a.respond(def) {
+    aspect-ratio: 4/3.5;
+    max-width: 95rem;
+  }
+  @include a.respond(mobile) {
+    aspect-ratio: 4 / 4;
+  }
   padding: 3rem 1rem 1rem 1rem;
   @include a.respond(mobile) {
     //projects should span most of width on mobile
     padding: 0.5rem;
     width: 95%;
   }
-  background-color: inherit;
 
   margin: 1rem 0;
   transform: scale(0.96);
@@ -29,6 +40,14 @@
 
   &:hover {
     transform: scale(1);
+  }
+  &__name-and-photo {
+    aspect-ratio: 4/3;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .carousel {
     position: relative;
@@ -77,8 +96,8 @@
       align-items: center;
       opacity: 0.5;
       background-color: a.$color-grey-light-50;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
       border-radius: 100%;
       border: none;
       box-shadow: none;
@@ -105,5 +124,11 @@
     height: 20%;
     max-height: 15rem;
     margin-top: 1rem;
+    @include a.respond(laptop) {
+      max-width: 30vw;
+    }
+    @include a.respond(desktop) {
+      max-width: 35vw;
+    }
   }
 }

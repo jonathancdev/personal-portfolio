@@ -143,6 +143,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 500px) {
   .introduction__button,
@@ -167,6 +168,14 @@ button {
 }
 .introduction__button:active svg path,
 .scroll-to-top__button:active svg path {
+  fill: rgba(41, 52, 79, 0.5);
+}
+.introduction__button:hover,
+.scroll-to-top__button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.introduction__button:hover svg path,
+.scroll-to-top__button:hover svg path {
   fill: rgba(41, 52, 79, 0.5);
 }
 
@@ -252,16 +261,17 @@ button {
 
 .introduction__heading--primary {
   font-size: clamp(2rem, 6vw, 4rem);
-  color: rgba(41, 52, 79, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 .introduction span {
   color: #5b78b0;
 }
 
 .about__text {
-  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.2vw, 2.5rem);
   text-align: center;
   padding: 2rem 2rem;
+  max-width: 65vw;
 }
 
 .navlink {
@@ -286,6 +296,9 @@ button {
   font-weight: 400;
   transform: scale(1.1);
   transition: all 0.2s ease-in-out;
+}
+.navlink:hover {
+  transform: scale(1.1);
 }
 
 input,
@@ -356,18 +369,23 @@ button {
   display: inline;
   padding: 1rem;
   color: rgba(41, 52, 79, 0.75);
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: clamp(1.5rem, 3.5vw, 3rem);
   letter-spacing: 3px;
 }
 .project__text {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.75);
   width: 90%;
   font-family: "Karla";
-  font-size: clamp(1.2rem, 2vw, 2.5rem);
+  font-size: clamp(1.4rem, 2vw, 2.5rem);
   font-weight: 400;
   letter-spacing: 0.5px;
+}
+@media (min-width: 800px) {
+  .project__text {
+    font-size: clamp(1.5rem, 1.75vw, 2.5rem);
+  }
 }
 
 @font-face {
@@ -502,6 +520,9 @@ button {
     width: 7rem;
   }
 }
+.about__img svg path {
+  fill: rgba(0, 0, 0, 0.1);
+}
 
 .skill-grid {
   display: grid;
@@ -536,8 +557,8 @@ button {
   z-index: 0;
 }
 .skill-grid__icon {
-  height: 8rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -545,10 +566,14 @@ button {
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
 }
+.skill-grid__icon svg {
+  height: 40px;
+  width: 40px;
+}
 @media (max-width: 800px) {
   .skill-grid__icon {
-    height: 7rem;
-    width: 7rem;
+    height: 6.5rem;
+    width: 6.5rem;
   }
   .skill-grid__icon svg {
     height: 40px;
@@ -588,28 +613,41 @@ button {
 }
 
 .project {
-  position: relative;
-  aspect-ratio: 4/3.5;
-  height: auto;
-  width: 90%;
-  max-width: 80rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem 1rem 1rem;
   background-color: inherit;
+  border-radius: 5px;
+  position: relative;
+  aspect-ratio: 4/4;
+  height: auto;
+  width: 90%;
+  max-width: 80rem;
+  padding: 3rem 1rem 1rem 1rem;
   margin: 1rem 0;
   transform: scale(0.96);
   transition: all 0.2s ease;
 }
-@media (max-width: 500px) {
+@media (min-width: 800px) {
   .project {
-    aspect-ratio: 4/4;
+    flex-direction: row;
+    width: 100%;
+    max-width: 95vw;
+    aspect-ratio: 2/1.2;
+  }
+  .project:nth-child(odd) {
+    flex-direction: row-reverse;
   }
 }
 @media (max-width: 800px) {
   .project {
+    aspect-ratio: 4/3.5;
     max-width: 95rem;
+  }
+}
+@media (max-width: 500px) {
+  .project {
+    aspect-ratio: 4/4;
   }
 }
 @media (max-width: 500px) {
@@ -620,6 +658,14 @@ button {
 }
 .project:hover {
   transform: scale(1);
+}
+.project__name-and-photo {
+  aspect-ratio: 4/3;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .project .carousel {
   position: relative;
@@ -664,8 +710,8 @@ button {
   align-items: center;
   opacity: 0.5;
   background-color: rgba(206, 218, 234, 0.5);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 100%;
   border: none;
   box-shadow: none;
@@ -692,6 +738,16 @@ button {
   height: 20%;
   max-height: 15rem;
   margin-top: 1rem;
+}
+@media (min-width: 800px) {
+  .project__text {
+    max-width: 30vw;
+  }
+}
+@media (min-width: 1200px) {
+  .project__text {
+    max-width: 35vw;
+  }
 }
 
 .contact {
@@ -747,9 +803,17 @@ button {
 .contact .submit__button {
   background-color: #5b78b0;
   cursor: pointer;
+  transition: all 0.1s linear;
+  transform: sclae(1);
+  letter-spacing: 3.5px;
+}
+.contact .submit__button:hover {
+  transform: translate(3px, 1px) scale(1.05);
+  transition: all 0.05s linear;
+  letter-spacing: 5.5px;
 }
 .contact .submit__button:active {
-  transform: translate(1px, 1px) scale(0.95);
+  transform: translate(1px, 1px) scale(0.98);
   transition: all 0.05s linear;
 }
 
@@ -777,6 +841,12 @@ button {
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
+}
+.footer .icon__link svg {
+  height: 3rem;
+}
+.footer .icon__link svg path {
+  fill: rgba(0, 0, 0, 0.75);
 }
 .footer .icon__link:first-child {
   margin-right: 2rem;

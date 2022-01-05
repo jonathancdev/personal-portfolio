@@ -33,7 +33,7 @@ const Header = ({ fixed, activeLink, updateActiveLink }) => {
           </span>
           <span
             className={activeLink === "contact" ? "navlink active" : "navlink"}
-            onClick={() => handleClick("contact")}
+            onClick={() => handleClick("contactsection")}
           >
             Contact
           </span>

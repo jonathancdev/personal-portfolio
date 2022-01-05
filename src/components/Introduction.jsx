@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from "react";
 import { scrollTo } from "../utils/scrollTo";
-// import Icon from "./Icon";
+import { ReactComponent as ArrowIcon } from "../svg/arrow.svg";
 import { motion, useAnimation } from "framer-motion";
 import {
   helloVariants,
@@ -84,7 +84,7 @@ export default function Introduction({ updateActiveLink }) {
           className="introduction__button"
           whileTap="tap"
         >
-          {/* <Icon name="arrow" /> */}
+          <ArrowIcon></ArrowIcon>
         </motion.button>
       </div>
     </section>

@@ -57,8 +57,16 @@
   .submit__button {
     background-color: a.$color-blue-medium;
     cursor: pointer;
+    transition: all 0.1s linear;
+    transform: sclae(1);
+    letter-spacing: 3.5px;
+    &:hover {
+      transform: translate(3px, 1px) scale(1.05);
+      transition: all 0.05s linear;
+      letter-spacing: 5.5px;
+    }
     &:active {
-      transform: translate(1px, 1px) scale(0.95);
+      transform: translate(1px, 1px) scale(0.98);
       transition: all 0.05s linear;
     }
   }

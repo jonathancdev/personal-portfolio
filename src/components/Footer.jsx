@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-// import Icon from "./Icon";
+import { ReactComponent as GithubIcon } from "../svg/github.svg";
+import { ReactComponent as EmailIcon } from "../svg/email.svg";
 
 export default function Footer() {
   const [emailLinkClicked, setEmailLinkClicked] = useState(false);
@@ -10,15 +11,14 @@ export default function Footer() {
     <footer className="footer">
       <div className="icons">
         <a className="icon__link" href="http://www.github.com">
-          {/* <Icon name="github" size="25px" color="rgba(0, 0, 0, 0.5)"></Icon> */}
-          <span>github</span>
+          <GithubIcon /> <span>github</span>
         </a>
         <div className="icon__link" onClick={handleClick}>
           {emailLinkClicked ? (
             <span>jonathancdev@protonmail.com</span>
           ) : (
             <>
-              {/* <Icon name="email" size="25px" color="rgba(0, 0, 0, 0.5)"></Icon> */}
+              <EmailIcon></EmailIcon>
               <span>email</span>
             </>
           )}

@@ -1,14 +1,13 @@
 import React from "react";
 import SkillGrid from "./SkillGrid";
-// import Icon from "./Icon";
+import { ReactComponent as AboutIcon } from "../svg/abouticon.svg";
 
 export default function About() {
-  // const aboutIcon = "../svg/icons/abouticon.svg";
   return (
     <section id="about" className="about main__section">
       <h1 className="section__heading--primary">About</h1>
       <div className="about__img">
-        {/* <Icon name="abouticon" size="100px" color="rgba(0, 0, 0, 0.25)" /> */}
+        <AboutIcon></AboutIcon>
       </div>
       <p className="about__text">
         Creativity, user experience, and the future of tech are at the forefront

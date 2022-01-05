@@ -45,7 +45,7 @@ button {
   &__heading {
     &--primary {
       font-size: clamp(2rem, 6vw, 4rem);
-      color: a.$color-blue-dark-50;
+      color: a.$color-black-50;
     }
   }
   span {
@@ -54,9 +54,10 @@ button {
 }
 .about {
   &__text {
-    font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+    font-size: clamp(1.5rem, 2.2vw, 2.5rem);
     text-align: center;
     padding: 2rem 2rem;
+    max-width: 65vw;
   }
 }
 .navlink {
@@ -80,6 +81,9 @@ button {
 
     transform: scale(1.1);
     transition: all 0.2s ease-in-out;
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 }
 input,
@@ -145,16 +149,19 @@ button {
     display: inline;
     padding: 1rem;
     color: a.$color-blue-dark-75;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: clamp(1.5rem, 3.5vw, 3rem);
     letter-spacing: 3px;
   }
   &__text {
-    color: a.$color-black-50;
+    color: a.$color-black-75;
     width: 90%;
     font-family: "Karla";
-    font-size: clamp(1.2rem, 2vw, 2.5rem);
+    font-size: clamp(1.4rem, 2vw, 2.5rem);
+    @include a.respond(laptop) {
+      font-size: clamp(1.5rem, 1.75vw, 2.5rem);
+    }
     font-weight: 400;
     letter-spacing: 0.5px;
   }

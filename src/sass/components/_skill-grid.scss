@@ -28,8 +28,12 @@
     z-index: 0;
   }
   &__icon {
-    height: 8rem;
-    width: 8rem;
+    svg {
+      height: 40px;
+      width: 40px;
+    }
+    height: 7rem;
+    width: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,8 +41,8 @@
     background-color: a.$color-white-25;
     border-radius: 50%;
     @include a.respond(def) {
-      height: 7rem;
-      width: 7rem;
+      height: 6.5rem;
+      width: 6.5rem;
       svg {
         height: 40px;
         width: 40px;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const Icon = ({ name, size, color }) => {
+  console.log(name);
   const ImportedIconRef = useRef(null);
   const [loading, setLoading] = useState(false);
 
