@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { scrollTo } from "../utils/scrollTo";
 // import Icon from "./Icon";
 import { motion, useAnimation } from "framer-motion";
@@ -17,17 +17,23 @@ export default function Introduction({ updateActiveLink }) {
   const webControls = useAnimation();
   const buttonControls = useAnimation();
 
-  useEffect(() => {
-    startSequence();
-  }, []);
-
-  const startSequence = async () => {
+  const startSequence = useCallback(async () => {
     await helloControls.start("start");
     jonathanControls.start("appear");
     await myNameControls.start("appear");
     await webControls.start("appear");
     buttonControls.start("appear");
-  };
+  }, [
+    buttonControls,
+    helloControls,
+    jonathanControls,
+    myNameControls,
+    webControls,
+  ]);
+
+  useEffect(() => {
+    startSequence();
+  }, [startSequence]);
 
   const handleClick = (section) => {
     scrollTo(section);

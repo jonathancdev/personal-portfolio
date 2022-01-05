@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export default function useScrollPosition() {
   const [headerShouldBeFixed, setHeaderShouldBeFixed] = useState(false);
@@ -36,18 +36,18 @@ export default function useScrollPosition() {
       setArrowButtonShouldBeVisible(false);
     }
   };
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     getActiveSection();
     setHeaderPosition();
     setButtonVisibility();
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return {
     handleScroll,
