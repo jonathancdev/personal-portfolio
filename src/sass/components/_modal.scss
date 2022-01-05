@@ -1,0 +1,54 @@
+@use "../abstracts/" as a;
+
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  &__message {
+    position: relative;
+    min-height: 20rem;
+    height: 30vw;
+    width: 60vw;
+    background-color: a.$color-blue-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    opacity: 0.95;
+    p {
+      font-size: clamp(1.5rem, 2.75vw, 3.5rem);
+      font-family: "Inconsolata";
+      text-transform: uppercase;
+      font-weight: 800;
+      color: a.$color-white-75;
+      letter-spacing: 2.5px;
+      padding: 0.5rem;
+      text-align: center;
+    }
+  }
+  &__close {
+    padding: 0;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    color: a.$color-white-75;
+
+    font-family: "Inconsolata";
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    font-size: clamp(1.5rem, 4vw, 5rem);
+
+    margin-top: 1rem;
+    transform: rotate(90deg);
+    svg {
+      height: 3rem;
+    }
+  }
+}

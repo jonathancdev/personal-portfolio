@@ -9,6 +9,7 @@ import ProjectSection from "./components/ProjectSection";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 import useScrollPosition from "./hooks/useScrollPosition";
 import { ReactComponent as ArrowIcon } from "./svg/arrow.svg";
 const IndexPage = () => {
@@ -17,16 +18,23 @@ const IndexPage = () => {
 
   const [activeLink, setActiveLink] = useState("home");
 
+  const [modalShouldBeVisible, setModalShouldBeVisible] = useState(false);
+
   const updateActiveLink = (section) => {
     setActiveLink(section);
   };
-
+  const updateModalShouldBeVisible = () => {
+    setModalShouldBeVisible(!modalShouldBeVisible);
+  };
   useEffect(() => {
     setActiveLink(currentSection);
   }, [currentSection]);
 
   return (
     <div className="background-container">
+      {modalShouldBeVisible && (
+        <Modal updateModalShouldBeVisible={updateModalShouldBeVisible} />
+      )}
       <Header
         fixed={headerShouldBeFixed}
         activeLink={activeLink}
@@ -41,7 +49,7 @@ const IndexPage = () => {
           <Project name="cvbreeze" />
           <Project name="weathergetter" />
         </ProjectSection>
-        <Contact />
+        <Contact updateModalShouldBeVisible={updateModalShouldBeVisible} />
         <Footer />
         <button
           className={

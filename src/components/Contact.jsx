@@ -6,8 +6,9 @@ const encode = (data) => {
     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 };
-export default function Contact() {
+export default function Contact({ updateModalShouldBeVisible }) {
   const {
+    reset,
     register,
     handleSubmit,
     formState: { errors },
@@ -22,7 +23,8 @@ export default function Contact() {
       }),
     })
       .then((response) => {
-        // navigate("/thanks/");
+        updateModalShouldBeVisible();
+        reset();
         console.log(response);
       })
       .catch((error) => console.log(error));
