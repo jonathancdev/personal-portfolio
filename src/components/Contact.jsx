@@ -41,12 +41,12 @@ export default function Contact() {
         className="contact__form"
       >
         <input type="hidden" name="form-name" value="contactform" />
-        <input
+        {/* <input
           type="text"
           className="visually-hidden"
           name="bot-field"
           {...register("bot-field")}
-        />
+        /> */}
         <div className="form__element">
           <label className="visually-hidden" htmlFor="name">
             name
