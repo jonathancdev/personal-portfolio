@@ -1,0 +1,30 @@
+@use "../abstracts/" as a;
+
+.introduction {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 5rem;
+  @include a.respond(mobile) {
+    //removes padding <500px to make room for text
+    padding: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  &__heading {
+    z-index: 2;
+  }
+
+  &__button {
+    margin-top: 3rem;
+  }
+}

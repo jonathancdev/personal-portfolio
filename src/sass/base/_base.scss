@@ -1,0 +1,183 @@
+@use "../abstracts/" as a;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* //defines 1rem */
+  font-size: 62.5%;
+  /* //sets default height to 100vh */
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  /* //100% height below fixed header */
+  height: 100%;
+  min-height: 100%;
+}
+#root {
+  /* //100% height */
+  height: 100%;
+}
+.App {
+  /* //100% height */
+  height: 100%;
+}
+
+.background-container {
+  position: relative;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+.main {
+  height: 100%;
+  width: 100%;
+
+  background-color: a.$color-grey-light;
+  animation: BackgroundGradient 18s ease;
+
+  &__section {
+    min-height: 100vh;
+    width: 100%;
+    padding: a.$height-header 0;
+  }
+}
+input,
+textarea {
+  padding: 1.5rem 1rem;
+  border-radius: 0px;
+  border: none;
+  border-radius: 3px;
+  background-color: inherit;
+  background-color: a.$color-white-50;
+  // box-shadow: inset -2px 2px 4px #cecece, inset 2px -2px 4px #f2f2f2;
+}
+
+input {
+  width: 35rem;
+  max-width: 35rem;
+  min-height: 5rem;
+  @include a.respond(mobile) {
+    width: 28rem;
+    max-width: 28rem;
+  }
+  @include a.respond(desktop) {
+    width: 40rem;
+    max-width: 40rem;
+  }
+}
+
+textarea {
+  width: 35rem;
+  max-width: 35rem;
+  @include a.respond(mobile) {
+    width: 28rem;
+    max-width: 28rem;
+  }
+  @include a.respond(desktop) {
+    width: 40rem;
+    max-width: 40rem;
+  }
+  min-height: 3rem;
+  max-height: 15rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+.submit__button {
+  min-width: 5rem;
+  width: 8rem;
+  &:active {
+  }
+}
+.introduction__button,
+.scroll-to-top__button {
+  height: 6rem;
+  width: 6rem;
+  @include a.respond(mobile) {
+    //makes button smaller on mobile
+    height: 4rem;
+    width: 4rem;
+  }
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    height: 2.5rem;
+    @include a.respond(mobile) {
+      height: 2rem;
+    }
+    path {
+      fill: a.$color-blue-medium;
+    }
+  }
+  &:active {
+    svg {
+      path {
+        fill: a.$color-blue-dark-50;
+      }
+    }
+  }
+}
+
+.scroll-to-top__button {
+  svg {
+    transform: rotate(180deg);
+    margin-top: 0.75rem;
+  }
+  position: fixed;
+  //different box-shadow because it floats over other elements
+
+  @include a.respond(mobile) {
+    //align button with footer icons and move left
+    top: 88.8vh;
+    left: 80vw;
+  }
+  top: 88vh;
+  left: 85.5vw;
+  opacity: 1;
+  transform: translate(0, 30rem) scale(1);
+  transition: transform 0.5s ease-in-out;
+  &.visible {
+    transform: translate(0, 0) scale(1);
+    transition: all 0.4s linear;
+  }
+  &:active {
+    transform: translate(1px, 1px) scale(0.95);
+    transition: all 0.05s linear;
+  }
+}
+// .arrow-up-icon {
+//   height: 2.5rem;
+//   @include a.respond(mobile) {
+//     //makes button icon smaller on mobile
+//     height: 1.75rem;
+//   }
+//   margin-top: 0.25rem;
+//   opacity: 1;
+//   transform: rotate(180deg);
+//   transition: all 0.4s ease-in-out;
+//   filter: invert(40%);
+// }
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

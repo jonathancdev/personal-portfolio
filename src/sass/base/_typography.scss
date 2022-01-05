@@ -1,0 +1,161 @@
+@use "../abstracts/" as a;
+
+p,
+h1,
+h2,
+h3,
+div {
+  color: a.$color-blue-medium;
+}
+h1,
+h2,
+h3,
+span {
+  font-family: "Inconsolata";
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+p,
+div,
+button {
+  font-family: "Karla";
+  color: a.$color-black-50;
+}
+.section {
+  &__heading {
+    &--primary {
+      color: a.$color-black-50;
+      width: 100%;
+      text-align: center;
+      font-size: clamp(2.5rem, 6.5vw, 4rem);
+      padding: 2rem;
+      margin-bottom: 1rem;
+      @include a.respond(mobile) {
+        //remove some vertical space on mobile
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      text-transform: uppercase;
+      font-weight: 800;
+      border-radius: 5px;
+    }
+  }
+}
+.introduction {
+  &__heading {
+    &--primary {
+      font-size: clamp(2rem, 6vw, 4rem);
+      color: a.$color-blue-dark-50;
+    }
+  }
+  span {
+    color: a.$color-blue-medium;
+  }
+}
+.about {
+  &__text {
+    font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+    text-align: center;
+    padding: 2rem 2rem;
+  }
+}
+.navlink {
+  color: a.$color-blue-dark-50;
+  font-size: clamp(1.3rem, 2.25vw, 2.25rem);
+  text-transform: uppercase;
+  font-weight: 200;
+  cursor: pointer;
+  font-family: "Karla";
+  transition: all 0.1s ease-in-out;
+  &:not(:last-child) {
+    margin-right: 10%;
+    @include a.respond(mobile) {
+      //reduce space between navlinks to fit on mobile
+      margin-right: 8%;
+    }
+  }
+  &.active {
+    color: a.$color-blue-medium;
+    font-weight: 400;
+
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
+}
+input,
+textarea {
+  font-size: clamp(1.3rem, 2.5vw, 2.25rem);
+  font-family: "Karla";
+  font-weight: 400;
+  color: a.$color-black-50;
+  text-transform: uppercase;
+  &::placeholder {
+    color: a.$color-black-75;
+    font-size: 1.6rem;
+  }
+}
+button {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: a.$color-grey-light-75;
+  font-family: "Inconsolata";
+  font-weight: 100;
+}
+.skill-grid {
+  &__heading--primary {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    padding: 1rem 0;
+  }
+  &__name {
+    font-size: 1.5rem;
+    @include a.respond(def) {
+      font-size: 1.25rem;
+      margin-top: 0.25rem;
+    }
+    @include a.respond(mobile) {
+      //fit text on mobile
+      font-size: 1.2rem;
+      margin-top: 0.25rem;
+    }
+  }
+}
+.form__error-message {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: a.$color-error;
+  text-transform: uppercase;
+  font-family: "Karla";
+}
+.submit__button {
+  //match color of input backgrounds
+  color: rgb(239, 239, 239);
+  font-size: 2rem;
+  font-family: "Inconsolata";
+  letter-spacing: 5px;
+  text-align: start;
+  font-weight: 800;
+}
+.project {
+  &__heading--primary {
+    display: inline;
+    padding: 1rem;
+    color: a.$color-blue-dark-75;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
+    letter-spacing: 3px;
+  }
+  &__text {
+    color: a.$color-black-50;
+    width: 90%;
+    font-family: "Karla";
+    font-size: clamp(1.2rem, 2vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+}

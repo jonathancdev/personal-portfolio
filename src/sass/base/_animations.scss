@@ -1,0 +1,28 @@
+@keyframes BackgroundGradient {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+@keyframes BackgroundColor {
+  0% {
+    background-color: #29344f;
+  }
+  50% {
+    background-color: #181f2f;
+  }
+  70% {
+    background-color: #1b2132;
+  }
+  90% {
+    background-color: #1f273b;
+  }
+  100% {
+    background-color: #29344f;
+  }
+}

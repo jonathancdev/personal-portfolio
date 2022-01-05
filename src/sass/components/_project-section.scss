@@ -1,0 +1,19 @@
+@use "../abstracts/" as a;
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  .project:nth-child(odd) {
+    align-self: flex-end;
+  }
+  @include a.respond(mobile) {
+    .project {
+      //center projects on mobile
+      align-self: center;
+    }
+    .project:nth-child(odd) {
+      //center projects on mobile
+      align-self: center;
+    }
+  }
+}

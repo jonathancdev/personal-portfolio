@@ -1,0 +1,10 @@
+@use "../abstracts/" as a;
+
+.home {
+  background-color: a.$color-black;
+  margin-top: a.$height-header;
+  &__posts {
+    height: 300px;
+    background-color: yellow;
+  }
+}

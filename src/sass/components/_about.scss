@@ -1,0 +1,28 @@
+@use "../abstracts/" as a;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  @include a.respond(mobile) {
+    //remove padding on mobile to fit text
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  //start section after header
+  padding-top: a.$height-header;
+
+  &__img {
+    height: 12rem;
+    width: 12rem;
+    @include a.respond(mobile) {
+      //smaller icon on mobile
+      height: 7rem;
+      width: 7rem;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

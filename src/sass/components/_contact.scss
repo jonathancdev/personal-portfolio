@@ -1,0 +1,65 @@
+@use "../abstracts/" as a;
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - #{a.$height-footer});
+  &__form {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    .form__error-message {
+      animation: shake 0.4s cubic-bezier(0.1, 0.01, 0.01, 0.02);
+    }
+
+    .form__element {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem 0 1rem 0;
+      position: relative;
+    }
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      letter-spacing: 0.25rem;
+      padding: 0rem 0.25rem 0.25rem 0.25rem;
+    }
+    .form__error-message {
+      display: flex;
+      justify-content: flex-start;
+      position: absolute;
+      bottom: 1.1rem;
+      width: 100%;
+      padding: 0 1rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @keyframes shake {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+      10%,
+      50% {
+        transform: translateX(-2px);
+      }
+      30%,
+      70% {
+        transform: translateX(2px);
+      }
+    }
+  }
+  .submit__button {
+    background-color: a.$color-blue-medium;
+    cursor: pointer;
+    &:active {
+      transform: translate(1px, 1px) scale(0.95);
+      transition: all 0.05s linear;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use "../abstracts/" as a;
+
+.skill-grid {
+  display: grid;
+  margin-top: 5rem;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(5, 10rem);
+  @include a.respond(def) {
+    grid-template-columns: repeat(5, 9rem);
+  }
+  grid-gap: 1.5rem;
+  @include a.respond(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 35rem;
+    margin-top: 1rem;
+  }
+  &__item {
+    min-height: 8rem;
+    min-width: 8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  }
+  &__icon {
+    height: 8rem;
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: a.$color-white-25;
+    border-radius: 50%;
+    @include a.respond(def) {
+      height: 7rem;
+      width: 7rem;
+      svg {
+        height: 40px;
+        width: 40px;
+      }
+    }
+    @include a.respond(mobile) {
+      svg {
+        height: 35px;
+        width: 35px;
+      }
+      height: 6rem;
+      width: 6rem;
+    }
+  }
+  &__name {
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+}

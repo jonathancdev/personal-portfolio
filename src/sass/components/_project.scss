@@ -1,0 +1,109 @@
+@use "../abstracts/" as a;
+.project {
+  position: relative;
+  aspect-ratio: 4 / 3.5;
+  height: auto;
+  width: 90%;
+  max-width: 80rem;
+  @include a.respond(mobile) {
+    aspect-ratio: 4 / 4;
+  }
+  @include a.respond(def) {
+    max-width: 95rem;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3rem 1rem 1rem 1rem;
+  @include a.respond(mobile) {
+    //projects should span most of width on mobile
+    padding: 0.5rem;
+    width: 95%;
+  }
+  background-color: inherit;
+
+  margin: 1rem 0;
+  transform: scale(0.96);
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1);
+  }
+  .carousel {
+    position: relative;
+    aspect-ratio: 4/3;
+    width: 90%;
+    height: auto;
+    &:hover {
+      .carousel__button {
+        opacity: 0.8;
+      }
+      .carousel__navigation {
+        width: 100%;
+      }
+    }
+    &__navigation {
+      position: absolute;
+
+      width: 95%;
+
+      display: flex;
+      justify-content: space-between;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.1s linear;
+    }
+    &__image {
+      display: none;
+      opacity: 0;
+      position: absolute;
+      height: auto;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      border-radius: 3px;
+
+      &.active {
+        display: block;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.5;
+      background-color: a.$color-grey-light-50;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100%;
+      border: none;
+      box-shadow: none;
+      // box-shadow: 0px 0px 0px #cedaea, 1px -1px 0px #cedaea;
+      transition: opacity 0.1s linear;
+      @include a.respond(mobile) {
+        opacity: 0.8;
+      }
+      &.left {
+        transform: rotate(90deg);
+      }
+      &.right {
+        transform: rotate(270deg);
+      }
+      svg {
+        height: 1.5rem;
+        path {
+          fill: a.$color-white-75;
+        }
+      }
+    }
+  }
+  &__text {
+    height: 20%;
+    max-height: 15rem;
+    margin-top: 1rem;
+  }
+}
