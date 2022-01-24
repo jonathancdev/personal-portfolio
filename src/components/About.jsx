@@ -11,7 +11,7 @@ export default function About() {
       </div>
       <p className="about__text">
         I make websites and applications for individuals, artists, small
-        businesses, and entrepreneurs. My designs deliver hight-quality user
+        businesses, and entrepreneurs. My designs deliver high-quality user
         experiences, helping clients realize their vision.
       </p>
 
