@@ -15,14 +15,16 @@ const projectInfo = {
     name: "leyra",
     title: "custom sites",
     description:
-      "Highly customized websites for artists / creatives / independent brands. These sites utilize CMS systems to allow clients to control the content of their site. They feature custom image galleries, blogs, contact forms, and more. Built with Gatsby, Sass, GraphQL, and CMS.",
+      "Highly customized webistes tailored to meet creative brand needs. Clients have the flexibility to update and add content independently. Built with Gatsby, Sass, GraphQL, and CMS.",
   },
   filmsupply: {
     name: "filmsupply",
     title: "e-commerce",
     description:
-      "High-speed and highly-optimized e-commerce sites built for small or scaling businesses. Clients can manage their products and inventory with simple admin tools. Built with next.js with the ability to connect to various payment solutions and CMS systems.",
+      "High performance e-commerce sites built for small and growing businesses. Clients conveniently manage products and inventory directly. Built to scale with demand and integrate with a variety of payment and business management systems.",
   },
 };
-
+//web apps
+//description: "Web apps empower businesses to better serve their customers online. Clients can take bookings, generate leads, and expand their services.";
+//
 export default projectInfo;

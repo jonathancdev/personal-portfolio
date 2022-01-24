@@ -10,10 +10,9 @@ export default function About() {
         <AboutIcon></AboutIcon>
       </div>
       <p className="about__text">
-        Creativity, user experience, and the future of tech are at the forefront
-        of my approach to web design. I love to create and use my skills to help
-        others realize their dreams. I make websites and applications for
-        individuals, artists, small businesses, and entrepreneurs.
+        I make websites and applications for individuals, artists, small
+        businesses, and entrepreneurs. My designs deliver hight-quality user
+        experiences, helping clients realize their vision.
       </p>
 
       <SkillGrid />
