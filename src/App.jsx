@@ -44,7 +44,7 @@ const IndexPage = () => {
         <Introduction updateActiveLink={updateActiveLink} />
         <About />
         <ProjectSection>
-          {/* <Project name="pluslist" /> */}
+          <Project name="pluslist" />
           <Project name="cvbreeze" />
           <Project name="weathergetter" />
           <Project name="leyra" />

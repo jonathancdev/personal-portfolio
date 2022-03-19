@@ -1,4 +1,10 @@
 const projectImages = {
+  pluslist: [
+    "https://res.cloudinary.com/dklynundl/image/upload/v1647729275/portfolio/pluslist1.png",
+    "https://res.cloudinary.com/dklynundl/image/upload/v1647729275/portfolio/pluslist2.png",
+    "https://res.cloudinary.com/dklynundl/image/upload/v1647729275/portfolio/pluslist3.png",
+    "https://res.cloudinary.com/dklynundl/image/upload/v1647729275/portfolio/pluslist4.png",
+  ],
   cvbreeze: [
     "https://res.cloudinary.com/dklynundl/image/upload/v1640891914/portfolio/cvbreeze1.png",
     "https://res.cloudinary.com/dklynundl/image/upload/v1640891914/portfolio/cvbreeze2.png",
