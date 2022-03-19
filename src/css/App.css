@@ -520,6 +520,10 @@ button {
     width: 7rem;
   }
 }
+.about__img svg {
+  height: 100%;
+  width: 100%;
+}
 .about__img svg path {
   fill: rgba(0, 0, 0, 0.1);
 }
