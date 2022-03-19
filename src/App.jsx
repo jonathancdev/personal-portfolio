@@ -44,10 +44,11 @@ const IndexPage = () => {
         <Introduction updateActiveLink={updateActiveLink} />
         <About />
         <ProjectSection>
-          <Project name="leyra" />
-          <Project name="filmsupply" />
+          {/* <Project name="pluslist" /> */}
           <Project name="cvbreeze" />
           <Project name="weathergetter" />
+          <Project name="leyra" />
+          <Project name="filmsupply" />
         </ProjectSection>
         <Contact updateModalShouldBeVisible={updateModalShouldBeVisible} />
         <Footer />
