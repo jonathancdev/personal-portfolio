@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="icons">
-        <a className="icon__link" href="http://www.github.com">
+        <a className="icon__link" href="http://www.github.com/jonathancdev">
           <GithubIcon /> <span>github</span>
         </a>
         <div className="icon__link" onClick={handleClick}>
