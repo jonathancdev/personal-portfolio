@@ -9,7 +9,7 @@
   position: relative;
   aspect-ratio: 4 / 4;
   height: auto;
-  width: 90%;
+  width: 95%;
   max-width: 80rem;
   @include a.respond(laptop) {
     flex-direction: row;
@@ -125,13 +125,16 @@
   &__info {
     position: relative;
     height: auto;
-    padding: 0 0 4rem 0;
+    padding: 0 0 2.5rem 0;
+    @include a.respond(mobile) {
+      max-width: 88%;
+    }
   }
   &__text {
     height: 20%;
     margin-top: 1rem;
     @include a.respond(laptop) {
-      max-width: 30vw;
+      max-width: 35vw;
     }
     @include a.respond(desktop) {
       max-width: 35vw;

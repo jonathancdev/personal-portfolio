@@ -378,7 +378,7 @@ button {
   color: rgba(0, 0, 0, 0.75);
   width: 90%;
   font-family: "Karla";
-  font-size: clamp(1.4rem, 2vw, 2.5rem);
+  font-size: clamp(1.3rem, 2vw, 2.5rem);
   font-weight: 400;
   letter-spacing: 0.5px;
 }
@@ -632,7 +632,7 @@ button {
   position: relative;
   aspect-ratio: 4/4;
   height: auto;
-  width: 90%;
+  width: 95%;
   max-width: 80rem;
   padding: 3rem 1rem 1rem 1rem;
   margin: 1rem 0;
@@ -750,7 +750,12 @@ button {
 .project__info {
   position: relative;
   height: auto;
-  padding: 0 0 4rem 0;
+  padding: 0 0 2.5rem 0;
+}
+@media (max-width: 500px) {
+  .project__info {
+    max-width: 88%;
+  }
 }
 .project__text {
   height: 20%;
@@ -758,7 +763,7 @@ button {
 }
 @media (min-width: 800px) {
   .project__text {
-    max-width: 30vw;
+    max-width: 35vw;
   }
 }
 @media (min-width: 1200px) {
