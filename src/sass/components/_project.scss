@@ -57,6 +57,7 @@
     &:hover {
       .carousel__button {
         opacity: 0.8;
+        box-shadow: 0px 0px 4px #b4b4b4a4;
       }
       .carousel__navigation {
         width: 100%;
@@ -94,13 +95,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      opacity: 0.5;
+      opacity: 0.6;
       background-color: a.$color-grey-light-50;
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 4rem;
+      height: 4rem;
       border-radius: 100%;
       border: none;
-      box-shadow: none;
       // box-shadow: 0px 0px 0px #cedaea, 1px -1px 0px #cedaea;
       transition: opacity 0.1s linear;
       @include a.respond(mobile) {
@@ -108,21 +108,27 @@
       }
       &.left {
         transform: rotate(90deg);
+        box-shadow: 1px 0px 4px #8a8a8aa4;
       }
       &.right {
         transform: rotate(270deg);
+        box-shadow: -1px 0px 4px #8a8a8aa4;
       }
       svg {
-        height: 1.5rem;
+        height: 2rem;
         path {
-          fill: a.$color-white-75;
+          fill: a.$color-white;
         }
       }
     }
   }
+  &__info {
+    position: relative;
+    height: auto;
+    padding: 0 0 4rem 0;
+  }
   &__text {
     height: 20%;
-    max-height: 15rem;
     margin-top: 1rem;
     @include a.respond(laptop) {
       max-width: 30vw;
@@ -130,5 +136,10 @@
     @include a.respond(desktop) {
       max-width: 35vw;
     }
+  }
+  &__link {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 }

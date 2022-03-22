@@ -387,6 +387,13 @@ button {
     font-size: clamp(1.5rem, 1.75vw, 2.5rem);
   }
 }
+.project__link {
+  font-size: clamp(1.4rem, 1.5vw, 2.5rem);
+  color: #5b78b0;
+}
+.project__link:visited {
+  color: #5b78b0;
+}
 
 @font-face {
   font-family: "Inconsolata";
@@ -679,6 +686,7 @@ button {
 }
 .project .carousel:hover .carousel__button {
   opacity: 0.8;
+  box-shadow: 0px 0px 4px #b4b4b4a4;
 }
 .project .carousel:hover .carousel__navigation {
   width: 100%;
@@ -712,13 +720,12 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.5;
+  opacity: 0.6;
   background-color: rgba(206, 218, 234, 0.5);
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 100%;
   border: none;
-  box-shadow: none;
   transition: opacity 0.1s linear;
 }
 @media (max-width: 500px) {
@@ -728,19 +735,25 @@ button {
 }
 .project .carousel__button.left {
   transform: rotate(90deg);
+  box-shadow: 1px 0px 4px #8a8a8aa4;
 }
 .project .carousel__button.right {
   transform: rotate(270deg);
+  box-shadow: -1px 0px 4px #8a8a8aa4;
 }
 .project .carousel__button svg {
-  height: 1.5rem;
+  height: 2rem;
 }
 .project .carousel__button svg path {
-  fill: rgba(255, 255, 255, 0.75);
+  fill: #ffffff;
+}
+.project__info {
+  position: relative;
+  height: auto;
+  padding: 0 0 4rem 0;
 }
 .project__text {
   height: 20%;
-  max-height: 15rem;
   margin-top: 1rem;
 }
 @media (min-width: 800px) {
@@ -752,6 +765,11 @@ button {
   .project__text {
     max-width: 35vw;
   }
+}
+.project__link {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .contact {

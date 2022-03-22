@@ -65,7 +65,12 @@ export default function Project({ name, title, description }) {
           </div>
         </div>
       </div>
-      <h1 className="project__text">{info.description}</h1>
+      <div className="project__info">
+        <h1 className="project__text">{info.description}</h1>
+        <a href={info.link} className="project__link">
+          {info.link}
+        </a>
+      </div>
     </div>
   );
 }

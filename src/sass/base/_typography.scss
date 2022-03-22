@@ -165,4 +165,11 @@ button {
     font-weight: 400;
     letter-spacing: 0.5px;
   }
+  &__link {
+    font-size: clamp(1.4rem, 1.5vw, 2.5rem);
+    color: a.$color-blue-medium;
+    &:visited {
+      color: a.$color-blue-medium;
+    }
+  }
 }
