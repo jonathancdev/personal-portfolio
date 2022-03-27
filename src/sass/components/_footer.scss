@@ -30,7 +30,8 @@
       }
     }
     cursor: pointer;
-    &:first-child {
+    &:first-child,
+    &:nth-child(2) {
       margin-right: 2rem;
     }
     span {

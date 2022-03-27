@@ -875,7 +875,7 @@ button {
 .footer .icon__link svg path {
   fill: rgba(0, 0, 0, 0.75);
 }
-.footer .icon__link:first-child {
+.footer .icon__link:first-child, .footer .icon__link:nth-child(2) {
   margin-right: 2rem;
 }
 .footer .icon__link span {
